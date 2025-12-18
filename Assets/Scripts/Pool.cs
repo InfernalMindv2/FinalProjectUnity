@@ -39,7 +39,7 @@ public class Pool : MonoBehaviour
     void Update()
     {
         // When ever player wait we will wait too
-        if (!Input.GetKey(KeyCode.RightArrow))
+        if (GameController.instance.isPaused || !Input.GetKey(KeyCode.RightArrow))
             return;
 
         treeTimeSinceLastSpawned += Time.deltaTime;

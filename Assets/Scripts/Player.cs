@@ -17,6 +17,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameController.instance.isPaused)
+            return;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb2d.linearVelocity = Vector2.zero;

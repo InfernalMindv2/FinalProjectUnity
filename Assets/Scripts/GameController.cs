@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     private int score = 0;
     public static GameController instance;
+    public bool isPaused = true;
     public GameObject gameOverText;
     public TextMeshProUGUI scoreText;
     public bool gameOver = false;

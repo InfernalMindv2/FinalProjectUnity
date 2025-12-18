@@ -13,7 +13,7 @@ public class Scrolling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.instance.gameOver || Input.GetKeyUp(KeyCode.RightArrow))
+        if (GameController.instance.gameOver || GameController.instance.isPaused || Input.GetKeyUp(KeyCode.RightArrow))
         {
             rb2d.linearVelocity = Vector2.zero;
         }
