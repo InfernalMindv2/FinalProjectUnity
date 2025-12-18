@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
   [SerializeField] private Transform gameTransform;
   [SerializeField] private Transform piecePrefab;
 
-  private List<Transform> pieces;
+  public List<Transform> pieces;
   private int emptyLocation;
   private int size;
   private bool shuffling = false;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour {
         // Pieces will be in a game board going from -1 to +1.
         piece.localPosition = new Vector3(-1 + (2 * width * col) + width,
                                           +1 - (2 * width * row) - width,
-                                          0);
+                                          -1);
         piece.localScale = ((2 * width) - gapThickness) * Vector3.one;
         piece.name = $"{(row * size) + col}";
         // We want an empty space in the bottom right.
@@ -68,14 +68,16 @@ public class GameManager : MonoBehaviour {
     pieces = new List<Transform>();
     size = 3;
     CreateGamePieces(0.01f);
-  }
+
+        StartCoroutine(WaitShuffle(1f));
+    }
 
   // Update is called once per frame
   void Update() {
     // Check for completion.
     if (!shuffling && CheckCompletion()) {
       shuffling = true;
-      StartCoroutine(WaitShuffle(0.5f));
+      //StartCoroutine(WaitShuffle(0.5f));
     }
 
     // On click send out ray to see if we click a piece.
@@ -112,7 +114,7 @@ public class GameManager : MonoBehaviour {
   }
 
   // We name the pieces in order so we can use this to check completion.
-  private bool CheckCompletion() {
+  public bool CheckCompletion() {
     for (int i = 0; i < pieces.Count; i++) {
       if (pieces[i].name != $"{i}") {
         return false;
@@ -124,7 +126,7 @@ public class GameManager : MonoBehaviour {
   private IEnumerator WaitShuffle(float duration) {
     yield return new WaitForSeconds(duration);
     Shuffle();
-    shuffling = false;
+    //shuffling = false;
   }
 
   // Brute force shuffling.

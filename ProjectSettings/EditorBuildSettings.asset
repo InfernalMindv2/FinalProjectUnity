@@ -23,5 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GamesScene/selectImage.unity
     guid: 43ae2626eb3930d46996f013fb89ef9a
+  - enabled: 1
+    path: Assets/Scenes/MemoryMatchScene/Memory-Game-2D-main/Assets/Scenes/MemoryScene.unity
+    guid: bcd39feea6bd73241b5edab107222207
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

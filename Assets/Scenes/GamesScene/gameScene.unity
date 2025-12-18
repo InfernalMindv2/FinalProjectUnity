@@ -416,7 +416,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 360472221}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1828934684}
+        m_TargetAssemblyTypeName: gameCharacterScript, Assembly-CSharp
+        m_MethodName: OnClickMemory
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &360472221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,7 +1554,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: -3313067391206180562, guid: 90240a205c321a043a87c0910eb50c3a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
