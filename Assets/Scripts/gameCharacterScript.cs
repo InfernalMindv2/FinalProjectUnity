@@ -103,4 +103,8 @@ public class gameCharacterScript : MonoBehaviour
     {
         SceneManager.LoadScene("MemoryScene");
     }
+    public void OnClicGirl()
+    {
+        SceneManager.LoadScene("girlFlyScene");
+    }
 }

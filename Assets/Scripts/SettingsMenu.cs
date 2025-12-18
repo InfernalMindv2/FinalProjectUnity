@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     public Toggle volumeToggle;
-    public List<Transform> piecesNow;
+    private List<Transform> piecesNow;
     void Start()
     {
         GameManager test = GetComponent<GameManager>();
