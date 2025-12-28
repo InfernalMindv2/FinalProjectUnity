@@ -27,7 +27,6 @@ public class gameCharacterMemory : MonoBehaviour
         Debug.Log(name);
         if (name == "clown_export-walk_19")
         {
-            Debug.Log("a7a");
             chGameObject.transform.position = new Vector3(-10.44f, 2.84f, 0f);
             chGameObject.transform.localScale = new Vector3(0.25f, 0.25f, 0f);
         }

@@ -13,14 +13,8 @@ public class PlayFabScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if(PlayerPrefs.GetInt("LoggedIn")==1 
-            && PlayerPrefs.HasKey("SelectedCharacter")
-            && PlayerPrefs.HasKey("Nickname"))
-        {
-            LoginButtonWithData();
-            //SceneManager.LoadScene("DashBoardScene");
-        }
-        else if(PlayerPrefs.GetInt("LoggedIn") == 1)
+       
+        if(PlayerPrefs.GetInt("LoggedIn") == 1)
         {
             LoginButtonWithData();
             //SceneManager.LoadScene("CharacterSelection");

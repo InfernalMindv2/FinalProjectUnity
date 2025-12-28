@@ -29,7 +29,6 @@ public class gameCharacterScript : MonoBehaviour
         {
             chGameObject = Instantiate(Resources.Load<GameObject>("UsedCharacter/" + name));
             Rigidbody2D rb = chGameObject.GetComponent<Rigidbody2D>();
-            Debug.Log("a7a");
             chGameObject.transform.position = new Vector3(-10.44f, 2.84f, 0f);
             chGameObject.transform.localScale = new Vector3(0.25f, 0.25f, 0f);
         }
@@ -48,7 +47,6 @@ public class gameCharacterScript : MonoBehaviour
             {
                 anim.applyRootMotion = false;
             }
-            Debug.Log("a7atmam");
             //chGameObject.transform.localScale = new Vector3(1.75f, 1.75f, 0f);
         }
         else
