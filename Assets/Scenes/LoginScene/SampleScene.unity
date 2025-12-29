@@ -2015,7 +2015,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1076879212}
         m_TargetAssemblyTypeName: PlayFabScript, Assembly-CSharp
-        m_MethodName: RegisterButton
+        m_MethodName: ResetPasswordButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
